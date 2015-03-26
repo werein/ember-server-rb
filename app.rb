@@ -4,14 +4,21 @@ require "redis"
 
 class App < Sinatra::Base
 
-  def index key
-    redis = Redis.new url: ENV['REDIS_URL']
-    key ||= redis.get "#{ENV['APP']}:current"
-    redis.get key
+  get '*' do
+    content_type 'text/html'
+    index
   end
 
-  get '*' do  
-    content_type 'text/html'
-    index params[:key]
-  end  
+  private
+    def redis
+      $redis ||= Redis.new url: ENV['REDIS_URL']
+    end
+
+    def key
+      params[:key] || redis.get("#{ENV['APP']}:current")
+    end
+
+    def index
+      redis.get key
+    end
 end
