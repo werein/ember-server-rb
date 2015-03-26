@@ -1,5 +1,7 @@
 # Ember-server.rb
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/werein/ember-server-rb)
+
 Simple Ruby server powered by Sinatra working out-of-the-box with Ember-deploy
 
 ## Instalation

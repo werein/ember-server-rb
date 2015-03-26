@@ -1,0 +1,22 @@
+{
+  "name": "Ember-Server.rb",
+  "description": "Minimal server for serving Ember.js application in Ruby using Sinatra and Redis",
+  "keywords": [
+    "ember",
+    "server",
+    "ruby"
+  ],
+  "website": "https://wereinhq.com/guides/ember-server-rb",
+  "repository": "https://github.com/werein/ember-server-rb",
+  "addons": ["redistogo:nano"],
+  "env": {
+    "APP": {
+      "description": "Name of your application - used as a namespace",
+      "value": "myapp"
+    },
+    "REDIS_URL": {
+      "description": "URL where Redis is running, including port and credentials",
+      "value": "REDISTOGO_URL"
+    }
+  }
+}
