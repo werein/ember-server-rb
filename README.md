@@ -4,7 +4,7 @@
 
 Simple Ruby server powered by Sinatra working out-of-the-box with Ember-deploy
 
-## Instalation
+## Installation
 
 Just deploy this repository to your favorite provider, set two environment variables and follow instructions on ember-deploy
 
